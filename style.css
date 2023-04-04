@@ -1,34 +1,104 @@
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 
 }
 
-form{
+form {
     padding: 0px !important;
 }
 
-body{
+body {
     background-image: linear-gradient(#f5740c, #989dec 80%);
     width: 100vw;
     height: 100vh;
 }
 
-header{
+header {
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -36,31 +106,39 @@ header{
 }
 
 /* navbar menu */
-#menu{
-    background-image: linear-gradient(#f5740c, #989dec 80%);
+#menu {
     text-align: center;
     height: 3em;
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     padding-left: 20px;
     padding-right: 20px;
+    border: 2px solid #131212;
 }
 
-#menu >*{
+#menu>* {
     color: #131212;
-    padding: 5px;
-    background-color: #7920F4;
-    border-radius: 10%;
+    padding: 10px;
+    font-weight: bolder;
 }
 
-#inicio:hover, #novidades:hover, #participe:hover{
+/* estilo de links */
+#linknovidades {
+    text-decoration: none;
+    color: rgb(245, 98, 0);
+    text-shadow: none;
+}
+
+#inicio:hover,
+#novidades:hover,
+#participe:hover {
     background-color: #989dec;
     text-decoration: none;
 }
 
 /* textos */
-.txt{
+.txt {
     color: antiquewhite;
     width: 50%;
     text-align: justify;
@@ -68,13 +146,14 @@ header{
     text-shadow: 3px 2px #131212;
 }
 
-.titulodotexto{
+.titulodotexto {
     color: rgb(173, 172, 171);
     margin-left: 20px;
     text-shadow: 3px 2px #131212;
 }
 
-.temaum{
+/* PARALLAX GERAL */
+.temaum {
     background-image: url(./img/RE4-Leon.webp);
     display: flex;
     flex-direction: column;
@@ -90,7 +169,7 @@ header{
     -webkit-background-size: cover;
 }
 
-.temadois{
+.temadois {
     background-image: url(./img/eldenring.webp);
     display: flex;
     flex-direction: column;
@@ -107,6 +186,39 @@ header{
 }
 
 
+/* PARALLAX DA PAGINA ESPECIFICA DE CADA TEMA */
+
+/* resident evil */
+.resident {
+    background-image: url(./img/RE4-Leon.webp);
+    display: flex;
+    flex-direction: column;
+    height: 1000vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/* textos */
+.txtresident {
+    color: antiquewhite;
+    width: 50%;
+    text-align: justify;
+    margin-left: 20px;
+    text-shadow: 3px 2px #131212;
+}
+
+.tituloresident {
+    margin-top: 3em;
+    color: rgb(173, 172, 171);
+    margin-left: 20px;
+    text-shadow: 3px 2px #131212;
+}
 
 
 
@@ -114,24 +226,18 @@ header{
 
 
 
-
-
-
-
-
-
-
+/* ELDEN RING */
 
 
 
 /* // Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) {}
 
 /* // Dispositivos small (telefones em modo paisagem, com menos de 768px) */
-@media (max-width: 767.98px) {  }
+@media (max-width: 767.98px) {}
 
 /* // Dispositivos médios (tablets com menos de 992px) */
-@media (max-width: 991.98px) {  }
+@media (max-width: 991.98px) {}
 
 /* // Dispositivos large (desktops com menos de 1200px) */
-@media (max-width: 1199.98px) {  }
+@media (max-width: 1199.98px) {}

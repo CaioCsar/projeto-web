@@ -23,20 +23,89 @@ form{
 }
 
 body{
-    background-image: linear-gradient(#F47920, #20F479 80%);
+    background-image: linear-gradient(#f5740c, #989dec 80%);
     width: 100vw;
     height: 100vh;
 }
 
-.parallax{
-    background-image: url(./img/RE4-Leon.webp);
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+header{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
 }
+
+/* navbar menu */
+#menu{
+    background-image: linear-gradient(#f5740c, #989dec 80%);
+    text-align: center;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#menu >*{
+    color: #131212;
+    padding: 5px;
+    background-color: #7920F4;
+    border-radius: 10%;
+}
+
+#inicio:hover, #novidades:hover, #participe:hover{
+    background-color: #989dec;
+    text-decoration: none;
+}
+
+/* textos */
+.txt{
+    color: antiquewhite;
+    width: 50%;
+    text-align: justify;
+    margin-left: 20px;
+    text-shadow: 3px 2px #131212;
+}
+
+.titulodotexto{
+    color: rgb(173, 172, 171);
+    margin-left: 20px;
+    text-shadow: 3px 2px #131212;
+}
+
+.temaum{
+    background-image: url(./img/RE4-Leon.webp);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 89vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.temadois{
+    background-image: url(./img/eldenring.webp);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
 
 
 

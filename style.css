@@ -209,7 +209,7 @@ header {
 .elden {
     background-image: url(./img/eldenring.webp);
     display: grid;
-    height: 100% !important;
+    height: 140vh;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -218,43 +218,70 @@ header {
     background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center
 }
 
 /* textos */
 
-.titulorelden {
-    grid-column-start: 1;
-    grid-column-end: 3;
+.tituloelden {
     grid-row-start: 1;
     grid-row-end: -6;
-    margin-top: 20px;
     color: rgb(173, 172, 171);
-    margin-left: 20px;
     text-shadow: 3px 2px #131212;
-
-    margin-left: 35%;
+    text-align: center;
 }
 
 .txtelden {
     color: antiquewhite;
     text-align: justify;
-    margin-left: 20px;
     text-shadow: 3px 2px #131212;
-    grid-column-start: 1;
-    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: -6;
-    margin-top: 150px;
+    padding: 10px;
+    width: 50em;
+} 
+
+#trailerelden{
     width: 450px;
-    margin-left: 35%;
+    height: 300px;
+    padding: 5px;
 }
 
-/* // Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+#eldenimg2{
+    width: 900px;
+    padding: 5px;
+}
+
+article{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+/* FORM */
+form{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#nome, #email, #idade, #mensagem{
+    width: 40em;
+}
+
+.btnGeral{
+    display: inline-block;
+}
 
 
-/* // Dispositivos small (telefones em modo paisagem, com menos de 768px) */
+/* RESPONSIVIDADE */
 @media (max-width: 900px) {
     .resident{
         grid-template-columns: 1fr;
@@ -303,6 +330,14 @@ header {
     .txtresident3{
         margin-right: 5%;
     }
+    #eldenimg2{
+        width:600px;
+        padding: 5px;
+    }
+
+    .txtelden {
+        width: 45em;
+    } 
 }
 
 /* // Dispositivos médios (tablets com menos de 992px) */
@@ -364,5 +399,16 @@ header {
         grid-row-end: -3;
     }
 
+    #eldenimg2{
+        width:450px;
+        padding: 5px;
+    }
 
+    .txtelden {
+        width: 28em;
+    } 
+
+    #nome, #email, #idade, #mensagem{
+        width: 30em;
+    }
 }

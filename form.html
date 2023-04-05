@@ -13,17 +13,55 @@
 </head>
 
 <body>
-    <form action="" class="container-fluid">
-        <header>
-            <h1 id="titulo">MUNDO DOS JOGOS</h1>
-            <h6 id="subtitulo">INFORMAÇÕES SOBRE GAMES VOCÊ ENCONTRA AQUI</h6>
-        </header>
-        <nav id="menu">
-            <a href="./index.html" id="inicio">Inicio</a>
-            <a href="./novidades.html" id="novidades">Novidades</a>
-            <a href="./form.html" id="participe">Participe da Pesquisa</a>
-        </nav>
-    </form>
+    <header>
+        <h1 id="titulo">MUNDO DOS JOGOS</h1>
+        <h6 id="subtitulo">INFORMAÇÕES SOBRE GAMES VOCÊ ENCONTRA AQUI</h6>
+    </header>
+    <nav id="menu">
+        <a href="./index.html" id="inicio">Inicio</a>
+        <a href="./novidades.html" id="novidades">Novidades</a>
+        <a href="./form.html" id="participe">Participe da Pesquisa</a>
+    </nav>
+    <form onload="form()" id="form">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+        </div>
+        <div class="form-group">
+          <label for="idade">Idade:</label>
+          <input type="number" class="form-control" id="idade" placeholder="Digite sua idade">
+        </div>
+        <div class="form-group">
+          <label for="genero">Gênero:</label><br>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="genero" value="masculino">Masculino
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="genero" value="feminino">Feminino
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua mensagem"></textarea>
+        </div>
+        <div class="btnGeral">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="button" class="btn btn-primary" id="btnlimpar">Limpar</button>
+        </div>
+      </form>
+      
+
+
+
+    <!--  bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

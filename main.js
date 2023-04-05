@@ -12,3 +12,31 @@ function novidades(){
 
     }
 }
+
+/* FORM */
+
+let btnLimpar = document.getElementById("btnlimpar");
+btnLimpar.addEventListener("click", function limpar(){
+    let inputnome = document.getElementById("nome");
+    let inputemail = document.getElementById("email");
+    let inputidade = document.getElementById("idade");
+    let inputmsg = document.getElementById("mensagem");
+
+    inputnome.value = ""
+    inputemail.value = ""
+    inputidade.value = ""
+    inputmsg.value = ""
+})
+
+function form(){
+    let inputnome = document.getElementById("nome");
+    let inputemail = document.getElementById("email");
+    let inputidade = document.getElementById("idade");
+    let inputmsg = document.getElementById("mensagem");
+    let form = document.getElementById("form");
+
+    let resultado = [inputnome.value, inputemail.value, inputidade.value, 
+    inputmsg.value]
+        form.submit()
+    console.log(resultado)
+}

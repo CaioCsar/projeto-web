@@ -1,84 +1,8 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,
+big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,
+dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,
+aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,
+summary,time,mark,audio,video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -191,9 +115,8 @@ header {
 /* resident evil */
 .resident {
     background-image: url(./img/RE4-Leon.webp);
-    display: flex;
-    flex-direction: column;
-    height: 1000vh !important;
+    display: grid;
+    height: fit-content !important;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -202,28 +125,83 @@ header {
     background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px 500px 720px 1fr 0.01fr;
 }
 
 /* textos */
-.txtresident {
-    color: antiquewhite;
-    width: 50%;
-    text-align: justify;
-    margin-left: 20px;
-    text-shadow: 3px 2px #131212;
-}
 
 .tituloresident {
-    margin-top: 3em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: -6;
+    margin-top: 20px;
     color: rgb(173, 172, 171);
     margin-left: 20px;
     text-shadow: 3px 2px #131212;
+
+    margin-left: 35%;
+}
+
+.txtresident {
+    color: antiquewhite;
+    text-align: justify;
+    margin-left: 20px;
+    text-shadow: 3px 2px #131212;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: -6;
+    margin-top: 150px;
+    width: 450px;
+    margin-left: 35%;
 }
 
 
+#videoRE{
+    width: 35em;
+    height: 20em;
+    margin: 10px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    margin-left: 20%;
+}
 
+.txtresident2 {
+    color: antiquewhite;
+    text-align: justify;
+    margin-left: 20%;
+    text-shadow: 3px 2px #131212;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 10%;
+    width: 500px;
+}
 
+.txtresident3 {
+    color: antiquewhite;
+    text-align: justify;
+    margin: 20px;
+    text-shadow: 3px 2px #131212;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top: 10px;
+}
 
+#regeneratorfoto{
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: -4;
+}
 
 
 /* ELDEN RING */
@@ -231,13 +209,119 @@ header {
 
 
 /* // Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
-@media (max-width: 575.98px) {}
+
 
 /* // Dispositivos small (telefones em modo paisagem, com menos de 768px) */
-@media (max-width: 767.98px) {}
+@media (max-width: 900px) {
+    .resident{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 0.01fr;
+    }
+
+    .tituloresident, .txtresident {
+        grid-column-start: 1;
+        grid-column-end: 3 !important;
+        grid-row-start: 1;
+        grid-row-end: -5;
+        height: fit-content;
+        margin-left: 20%;
+    }
+    
+    .txtresident {
+        margin-right: 20px;
+        margin-left: 25%;
+    }
+
+    #videoRE, .txtresident2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: -4;
+    }
+
+    #videoRE{
+        margin-left: 20%;
+    }
+
+    .txtresident2{
+        margin-right: 40%;
+        margin-left: 20%;
+        margin-top: 45%;
+        width: 550px;
+    }
+
+    .txtresident3, #regeneratorfoto{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: -3;
+    }
+
+    .txtresident3{
+        margin-right: 5%;
+    }
+}
 
 /* // Dispositivos médios (tablets com menos de 992px) */
 @media (max-width: 991.98px) {}
 
 /* // Dispositivos large (desktops com menos de 1200px) */
 @media (max-width: 1199.98px) {}
+
+@media (max-width: 600px) {
+    .resident{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 0.01fr;
+        justify-items: center;
+    }
+
+    .resident>*{}
+    
+    .parallax{
+        height: 135vh !important;
+    }
+
+    .tituloresident, .txtresident {
+        grid-column-start: 1;
+        grid-column-end: 3 !important;
+        grid-row-start: 1;
+        grid-row-end: -5;
+        height: fit-content;
+        justify-self: center;
+    }
+    
+    .txtresident{
+        margin: 120px 5px 10px 0px;
+        align-self: end;
+        height: fit-content;
+    }
+    
+
+    #videoRE, .txtresident2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: -4;
+        justify-self: center;
+    }
+
+    #videoRE{
+        width: 420px;
+        margin: 0px 20px 20px 20px;
+    }
+
+    .txtresident2{
+        margin: 350px 20px 20px 20px;
+        align-self: end;
+        width: 400px;
+    }
+
+    .txtresident3, #regeneratorfoto{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: -3;
+    }
+
+
+}

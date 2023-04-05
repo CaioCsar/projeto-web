@@ -18,23 +18,40 @@
         <h6 id="subtitulo">INFORMAÇÕES SOBRE GAMES VOCÊ ENCONTRA AQUI</h6>
     </header>
     <nav id="menu">
-        <a href="./index.html" id="inicio">Inicio</a>
-        <a href="./novidades.html" id="novidades">Novidades</a>
+        <a href="./index.html" id="inicio" >Inicio</a>
+        <a href="./novidades.html" id="novidades" >Novidades</a>
         <a href="./form.html" id="participe">Participe da Pesquisa</a>
     </nav>
     <nav id="menu">
-        <a href="#" id="resident">Resident Evil</a>
-        <a href="#" id="elden">Elden Ring</a>
+        <a href="#" id="resident" onclick="novidades()">Resident Evil</a>
+        <a href="#" id="elden" onclick="novidades()">Elden Ring</a>
     </nav>
-    <section class="parallax resident">
+    <section class="parallax resident" id="resident">
         <h1 class="tituloresident">UM RETORNO GLORIOSO</h1>
-        <p class="txtresident">Fãs da franquia Resident Evil receberam agora, para a alegria de todos, uma magnífica
+        <p class="txtresident">
+            
+            Fãs da franquia Resident Evil receberam agora, para a alegria de todos, uma magnífica
             reimaginação
             do quarto jogo da franquia, contanto com diversos conteúdos extras diferentes da versão original, como
             missões secundárias, por exemplo, e melhorias gráficas já esperadas vinda da RE engine também utilizada
             nos títulos anteriores da franquia desde o Resident Evil 7.
         </p>
-
+        <p class="txtresident2">
+            O jogo foi pela primeira vez apresentado em 3 de junho de 2022,
+            com um pequeno teaser, sem entregar muito do que viria por ai, mas que 
+            foi o bastante para deixar os fãs com água na boca, ansiosos pelo que viria por ai, 
+            ao mesmo tempo que ficaram preocupados com a possibilidade de se repetir o que ocorreu
+            com o jogo antecessor a ganhar um remake, o Resident evil 3, que sofreu com diversos
+            cortes e teve uma experiência de gameplay reduzida.
+        </p>
+        <iframe src="https://www.youtube.com/embed/bwxMrAy4z-s" frameborder="0" id="videoRE"></iframe>
+        <img src="./img/regeneratorRE.png" alt="resident-regenerator" id="regeneratorfoto">
+        <p class="txtresident3">
+            Este título não somente recebeu um upgrade em seu visual, como, assim como os anteriores, recebeu uma melhoria gigantesca
+            em sua jogabilidade, não somente isso, a Capcom parece ter ouvido bastante o feedback sobre o jogo anterior
+            e incluiu novos elementos não disponíveis no jogo original, além também de modificar 
+            alguns elementos não tão interessantes que haviam anteriormente no jogo.
+        </p>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

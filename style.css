@@ -206,7 +206,50 @@ header {
 
 /* ELDEN RING */
 
+.elden {
+    background-image: url(./img/eldenring.webp);
+    display: grid;
+    height: 100% !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
 
+/* textos */
+
+.titulorelden {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: -6;
+    margin-top: 20px;
+    color: rgb(173, 172, 171);
+    margin-left: 20px;
+    text-shadow: 3px 2px #131212;
+
+    margin-left: 35%;
+}
+
+.txtelden {
+    color: antiquewhite;
+    text-align: justify;
+    margin-left: 20px;
+    text-shadow: 3px 2px #131212;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: -6;
+    margin-top: 150px;
+    width: 450px;
+    margin-left: 35%;
+}
 
 /* // Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
 
@@ -274,8 +317,6 @@ header {
         grid-template-rows: 1fr 1fr 0.01fr;
         justify-items: center;
     }
-
-    .resident>*{}
     
     .parallax{
         height: 135vh !important;

@@ -23,10 +23,10 @@
         <a href="./form.html" id="participe">Participe da Pesquisa</a>
     </nav>
     <nav id="menu">
-        <a href="#" id="resident" onclick="novidades()">Resident Evil</a>
-        <a href="#" id="elden" onclick="novidades()">Elden Ring</a>
+        <a href="#" id="residentmenu" onclick="novidades()">Resident Evil</a>
+        <a href="#" id="eldenmenu" onclick="novidades()" >Elden Ring</a>
     </nav>
-    <section class="parallax resident" id="resident">
+    <section class="parallax resident" id="resident"  style="display: grid;">
         <h1 class="tituloresident">UM RETORNO GLORIOSO</h1>
         <p class="txtresident">
             
@@ -53,6 +53,14 @@
             alguns elementos não tão interessantes que haviam anteriormente no jogo.
         </p>
     </section>
+    <section class="parallax elden" id="elden" style="display: none;">
+        <h1 class="tituloelden">UM NOVO MUNDO</h1>
+        <p class="txtelden">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Natus quidem quaerat obcaecati et nesciunt in distinctio mollitia incidunt
+            pariatur quisquam ex reiciendis facere, explicabo omnis porro, magni
+            quibusdam ipsam necessitatibus?<br>
+            Para saber mais, clique em <a id="linknovidades" href="./novidades.html">Saiba Mais</a>
+        </p>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

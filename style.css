@@ -272,13 +272,19 @@ form{
     justify-content: center;
 }
 
-#nome, #email, #idade, #mensagem{
+#nome, #email, #idade, #mensagem, #senha, #cpf{
     width: 40em;
 }
 
 .btnGeral{
     display: inline-block;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 
 
 /* RESPONSIVIDADE */
@@ -408,7 +414,7 @@ form{
         width: 28em;
     } 
 
-    #nome, #email, #idade, #mensagem{
+    #nome, #email, #idade, #mensagem, #senha, #cpf{
         width: 30em;
     }
 }

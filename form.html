@@ -2,75 +2,100 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Projeto Web</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./img/game.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Projeto Web</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./img/game.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <h1 id="titulo">MUNDO DOS JOGOS</h1>
-        <h6 id="subtitulo">INFORMAÇÕES SOBRE GAMES VOCÊ ENCONTRA AQUI</h6>
-    </header>
-    <nav id="menu">
-        <a href="./index.html" id="inicio">Inicio</a>
-        <a href="./novidades.html" id="novidades">Novidades</a>
-        <a href="./form.html" id="participe">Participe da Pesquisa</a>
-    </nav>
-    <form onload="form()" id="form">
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Digite seu email">
-        </div>
-        <div class="form-group">
-          <label for="idade">Idade:</label>
-          <input type="number" class="form-control" id="idade" placeholder="Digite sua idade">
-        </div>
-        <div class="form-group">
-          <label for="genero">Gênero:</label><br>
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="genero" value="masculino">Masculino
-            </label>
-          </div>
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="genero" value="feminino">Feminino
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="mensagem">Mensagem:</label>
-          <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua mensagem"></textarea>
-        </div>
-        <div class="btnGeral">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            <button type="button" class="btn btn-primary" id="btnlimpar">Limpar</button>
-        </div>
-      </form>
-      
+  <header>
+    <h1 id="titulo">MUNDO DOS JOGOS</h1>
+    <h6 id="subtitulo">INFORMAÇÕES SOBRE GAMES VOCÊ ENCONTRA AQUI</h6>
+  </header>
+  <nav id="menu">
+    <a href="./index.html" id="inicio">Inicio</a>
+    <a href="./novidades.html" id="novidades">Novidades</a>
+    <a href="./form.html" id="participe">Participe da Pesquisa</a>
+  </nav>
+  <form action="mailto:caio.0000008781@se.aluno.senai.br" id="form" method="post">
+
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha:</label>
+      <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+    </div>
+
+    <div class="form-group">
+      <label for="idade">Idade:</label>
+      <input type="number" class="form-control" id="idade" placeholder="Digite sua idade">
+    </div>
+
+    <div class="form-group">
+      <label for="cpf">CPF:</label>
+      <input type="text" class="form-control"  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" onfocusout="TestaCPF()" id="cpf" onKeyPress="if(this.value.length==14) return false;" placeholder="Digite seu CPF">
+    </div>
+
+    <div class="form-group">
+      <label for="genero">Gênero:</label><br>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="masc" type="radio" class="form-check-input" name="genero" value="masculino">Masculino
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input id="fem" type="radio" class="form-check-input" name="genero" value="feminino">Feminino
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="idade">Aonde você acompanha notícias sobre jogos? </label><br>
+      <input class="form-check-inline" type="checkbox" value="youtube" id="checkbox1">
+      <label class="form-check-label" for="flexCheck"> Youtube </label>
+      <input class="form-check-inline" type="checkbox" value="sites/blogs" id="checkbox2">
+      <label class="form-check-label" for="flexCheckDefault"> Sites/Blogs</label>
+      <input class="form-check-inline" type="checkbox" value="outros" id="checkbox3">
+      <label class="form-check-label" for="flexCheckDefault"> Outros</label>
+    </div>
+
+    <div class="form-group">
+      <label for="mensagem">Mensagem:</label>
+      <textarea style="resize: none" class="form-control" id="mensagem" rows="3"
+        placeholder="Digite sua mensagem"></textarea>
+    </div>
+    <div class="btnGeral">
+      <input type="submit" class="btn btn-primary" onclick="formresult()"></input>
+      <button type="button" class="btn btn-primary" id="btnlimpar">Limpar</button>
+    </div>
+  </form>
 
 
 
-    <!--  bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+  <!--  bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>
 <script src="main.js"></script>
 

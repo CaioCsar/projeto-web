@@ -30,14 +30,14 @@ function TestaCPF() {
         Resto = (Soma * 10) % 11;
       
           if ((Resto == 10) || (Resto == 11))  Resto = 0;
-          if (Resto != parseInt(cpf.value.substring(9, 10)) ) return false;
+          if (Resto != parseInt(cpf.value.substring(9, 10)) ) return alert("CPF invalido"), cpf.value ="";
       
         Soma = 0;
           for (i = 1; i <= 10; i++) Soma = Soma + parseInt(cpf.value.substring(i-1, i)) * (12 - i);
           Resto = (Soma * 10) % 11;
       
           if ((Resto == 10) || (Resto == 11))  Resto = 0;
-          if (Resto != parseInt((cpf.value).substring(10, 11) ) ) return false
+          if (Resto != parseInt((cpf.value).substring(10, 11) ) ) return alert("CPF invalido"), cpf.value ="";
           return true;
     }
 }
@@ -107,12 +107,12 @@ function formresult() {
     let resultado = {
         Nome: inputnome.value,
         email: inputemail.value,
-        Idade: inputidade.value,
-        Msg: inputmsg.value,
-        Sexo: sexo.value,
-        CPF: cpf.value,
         Senha: senha.value,
+        Idade: inputidade.value,
+        CPF: cpf.value,
+        Sexo: sexo.value,
         Mídias: midia,
+        Msg: inputmsg.value,
     }
 
     console.log(resultado)
